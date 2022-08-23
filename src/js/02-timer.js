@@ -98,14 +98,14 @@ function getTimeComponents(ms) {
 // show my timer
 function updateClockFace({ days, hours, minutes, seconds }) {
   refs.counterBoxEl.style.opacity = 1;
-  if (days !== 00) {
+  if (String(days) !== "00") {
     refs.daysEl.textContent =
       refs.counterBoxEl.firstElementChild.style.display = 'flex';
     refs.daysEl.textContent = `${days}`;
   } else {
     refs.counterBoxEl.firstElementChild.style.display = 'none';
   }
-  if (hours !== 00) {
+  if (String(hours) !== "00") {
     refs.hoursEl.textContent =
       refs.counterBoxEl.firstElementChild.nextElementSibling.style.display =
         'flex';
@@ -114,7 +114,7 @@ function updateClockFace({ days, hours, minutes, seconds }) {
     refs.counterBoxEl.firstElementChild.nextElementSibling.style.display =
       'none';
   }
-  if (minutes !== 00) {
+  if (String(minutes) !== "00") {
     refs.minutesEl.textContent =
       refs.counterBoxEl.lastElementChild.previousElementSibling.style.display =
         'flex';
